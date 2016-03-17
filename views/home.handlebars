@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="jumbotron">
+      <h1 class="display-3">Weather Finder</h1>
+      <p class="lead">The simplest weather finder ever!</p>
+      <hr class="m-y-2">
+      <p>Fill out the form below, and we'll find the current weather situation in your area!</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <form>
+    <div class="col-sm-9 form-group">
+      <label class="form-control-label" for="input">City / Zip Code</label>
+      <input type="text" class="form-control" id="input" placeholder="ex: 'Austin' or '78758'">
+      <small id="validation" class="text-muted"></small>
+    </div>
+    <div class="col-sm-3">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+<div id="results" class="row">
+  <div class="col-md-6">
+    <div id="conditions" class="card">
+      <div class="card-block">
+        <h4 class="card-title">
+          <img src="http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0006_mist.png" alt="Card image cap" alt="Condition image here..." />
+          Current Conditions
+        </h4>
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Temperature:</h5>
+            <button id="tempToggle" type="button" class="btn btn-primary-outline">
+              <span id="tempf"><span id="value">50</span> F</span>
+              <span id="tempc"><span id="value">50</span> C</span>
+            </button>
+          </div>
+          <div class="col-md-6">
+            <h5>Humidity:</h5>
+            <button id="humidity" type="button" class="btn btn-primary-outline">50 F</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="weather" class="col-md-6">
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">Daily Forecast</h4>
+
+        <div id="details">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

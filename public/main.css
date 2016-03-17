@@ -1,0 +1,16 @@
+#validation {
+  color: red;
+}
+
+button[type="submit"] {
+  float: right;
+  margin-top: 36px;
+}
+
+#results {
+  display: none;
+}
+
+#tempc {
+  display: none;
+}
