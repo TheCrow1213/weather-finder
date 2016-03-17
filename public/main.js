@@ -44,17 +44,24 @@ function handleResponse(response) {
   else if (data.current_condition && data.weather) {
     showConditions(data.current_condition[0]);
     showWeather(data.weather);
+    showLabel(data.request[0]);
     console.log(response.data);
   }
+}
+
+function showLabel(labelData) {
+  $('#results #label').text(labelData.query);
 }
 
 function showConditions(conditions) {
   var tempf = conditions.temp_F;
   var tempc = conditions.temp_C;
   var humidity = conditions.humidity;
-  $('#tempf #value').text(tempf);
-  $('#tempc #value').text(tempc);
-  $('#humidity').text(humidity);
+  var iconUrl = conditions.weatherIconUrl[0].value;
+  $('#conditions #tempf #value').text(tempf);
+  $('#conditions #tempc #value').text(tempc);
+  $('#conditions #humidity').text(humidity);
+  $('#conditions img').attr("src", iconUrl);
 }
 
 function showWeather(weather) {
@@ -111,7 +118,7 @@ function showText(button) {
 }
 
 function isAlpha(str) {
-  return /^[a-zA-Z\s]+$/.test(str);
+  return /^[a-zA-Z\s.]+$/.test(str);
 }
 
 function showResults() {
